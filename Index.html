@@ -1,65 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veloce</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .product {
-            background-color: white;
-            border: 1px solid #ddd;
-            margin: 10px;
-            padding: 15px;
-            width: 250px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .product img {
-            max-width: 100%;
-            height: auto;
-        }
-        .product h3 {
-            margin: 10px 0 5px 0;
-        }
-        .product p {
-            color: #555;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veloce Car Sales</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #000000, #1f1f1f);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1502877338535-766e1452684a') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    background: rgba(0,0,0,0.6);
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+/* Products Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px;
+}
+
+.card p {
+    margin: 0 15px 15px;
+    color: #555;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Veloce</h1>
-        <p>Your Dream Car Listings</p>
-    </header>
-    <section class="products">
-        <!-- Example Product 1 -->
-        <div class="product">
-            <img src="car1.jpg" alt="Car 1">
-            <h3>2022 Sport Car</h3>
-            <p>Price: $50,000</p>
-        </div>
-        <!-- Add more products here -->
-    </section>
+
+<header>
+    <h1>🚗 Veloce Car Sales</h1>
+</header>
+
+<section class="hero">
+    <h2>Find Your Dream Car Today</h2>
+</section>
+
+<section class="products">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54d" alt="Car">
+        <h3>BMW M4</h3>
+        <p>$65,000</p>
+        <a href="#" class="button">View Details</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Car">
+        <h3>Mercedes C-Class</h3>
+        <p>$48,000</p>
+        <a href="#" class="button">View Details</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1583267746897-3a3f5e37df1b" alt="Car">
+        <h3>Audi R8</h3>
+        <p>$120,000</p>
+        <a href="#" class="button">View Details</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Veloce Car Sales | All Rights Reserved
+</footer>
+
 </body>
 </html>
